@@ -4,6 +4,13 @@
         <title>Pagina en Django</title>
     </head>
     <body>
-        <p>It works!!!</p> 
+        <h1>El primer  sitio web en Python(django)</h1>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>Published: {{ post.published_date }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
